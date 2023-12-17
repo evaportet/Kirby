@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "369408647342",
+    "project_id": "kirbycdi",
+    "storage_bucket": "kirbycdi.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:369408647342:android:8d5b3c718fbd248fb5cd3f",
+        "android_client_info": {
+          "package_name": "cdi.kirby"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "369408647342-mln6grui1nld2l5fjembos96cpacjuh3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "cdi.kirby",
+            "certificate_hash": "3363be3090cbfcd1a09314b88858c189d3de737c"
+          }
+        },
+        {
+          "client_id": "369408647342-3hhoftnd70o3qi73mdkc9ns8jego3d1b.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBzFSarEYOkH_t5e9bs2o9nA7cU7fGwT5Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "369408647342-3hhoftnd70o3qi73mdkc9ns8jego3d1b.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
