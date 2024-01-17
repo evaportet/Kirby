@@ -14,27 +14,27 @@
         android:src="@drawable/toolbar"
         >
     </ImageView>
+    <!--  Por algun motivo da error de render por la carisima
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/toolbar"
+            android:layout_above="@+id/bottombar"
+            android:name="cdi.kirby.fragments.components.AppNavHost"
+            tools:layout="@layout/component_navhost"
+            >
+        </androiagment.app.FragmentContainerView>
 
-    <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/content"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@+id/toolbar"
-        android:layout_above="@+id/bottombar"
-        android:name="cdi.kirby.fragments.components.AppNavHost"
-        tools:layout="@layout/component_navhost"
-        >
-    </androidx.fragment.app.FragmentContainerView>
-
-    <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/bottombar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        tools:layout="@layout/component_bottombar"
-        >
-    </androidx.fragment.app.FragmentContainerView>
-
+    <!-    <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/bottombar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            tools:layout="@layout/component_bottombar"
+            >
+        </androidx.fragment.app.FragmentContainerView>
+        -->
 
 </RelativeLayout>
     
