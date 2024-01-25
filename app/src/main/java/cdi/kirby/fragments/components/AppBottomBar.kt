@@ -37,8 +37,6 @@ class AppBottomBar: Fragment() {
 
         bottomBar.setOnItemSelectedListener { menuItem ->
 
-            AppToolbar.get().toolbar.title = menuItem.title
-
             if(menuItem.itemId != bottomBar.selectedItemId)
             {
                 when(menuItem.itemId) {

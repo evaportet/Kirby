@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Kirby</string>
     <string name="news">News</string>
+    <string name="unknown_user">Unknown Username</string>
 </resources>
