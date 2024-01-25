@@ -11,9 +11,7 @@
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="127dp"
-        android:src="@drawable/toolbar"
-        >
-    </ImageView>
+        android:src="@drawable/toolbar"></ImageView>
         <androidx.fragment.app.FragmentContainerView
             android:id="@+id/content"
             android:layout_width="match_parent"
@@ -21,7 +19,6 @@
             android:layout_below="@+id/toolbar"
             android:layout_above="@+id/bottombar"
             android:name="cdi.kirby.fragments.components.AppNavHost"
-            tools:layout="@layout/component_navhost"
             >
         </androidx.fragment.app.FragmentContainerView>
 
