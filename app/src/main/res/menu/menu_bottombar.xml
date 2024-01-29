@@ -3,8 +3,29 @@
     <group>
         <item
             android:id="@+id/news"
-            android:icon="@drawable/icon_news"
+            android:icon="@drawable/newsbutton"
             android:title="@string/news"
+            >
+
+        </item>
+        <item
+            android:id="@+id/games"
+            android:icon="@drawable/gamesbutton"
+            android:title="@string/games"
+            >
+
+        </item>
+        <item
+            android:id="@+id/community"
+            android:icon="@drawable/communitybutton"
+            android:title="@string/community"
+            >
+
+        </item>
+        <item
+            android:id="@+id/configuration"
+            android:icon="@drawable/settingsbutton"
+            android:title="@string/configuration"
             >
 
         </item>

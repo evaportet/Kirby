@@ -24,7 +24,7 @@ class News_screen : Fragment(){
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        fragmentView = inflater.inflate(R.layout.news, container, false)
+        fragmentView = inflater.inflate(R.layout.news_screen, container, false)
         return fragmentView
     }
 
