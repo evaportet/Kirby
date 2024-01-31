@@ -27,7 +27,7 @@ class News_screen : Fragment(){
         fragmentView = inflater.inflate(R.layout.news_screen, container, false)
         return fragmentView
     }
-
+    /*
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
@@ -40,6 +40,8 @@ class News_screen : Fragment(){
             })
             */
     }
+     */
+
     //loading image for our news
     private fun loadImage(image: ShapeableImageView, uri: Uri)
     {

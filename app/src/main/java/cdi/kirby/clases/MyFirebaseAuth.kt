@@ -4,7 +4,7 @@ import android.app.Application
 import cdi.kirby.R
 import com.google.firebase.auth.FirebaseAuth
 
-class MyFirebaseAuth(val appContext: Application) {
+class MyFirebaseAuth() {
 
     private val firebaseAuthentication = FirebaseAuth.getInstance()
     private var currentUser: DataBaseUser? = null

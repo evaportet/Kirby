@@ -13,12 +13,13 @@
     </ImageView>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:background="@color/fui_transparent"
+        android:background="@color/pinkSoft"
         android:id="@+id/AppNavigationBottomBar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:menu="@menu/menu_bottombar"
         app:layout_constraintBottom_toBottomOf="@id/bottombar_img"
-        app:itemIconSize="48dp"/>
+        app:labelVisibilityMode="unlabeled"
+        app:itemIconSize="24dp"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

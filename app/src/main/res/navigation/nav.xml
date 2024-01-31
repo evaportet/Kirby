@@ -4,23 +4,140 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav"
-    app:startDestination="@id/mainmenu"
+    app:startDestination="@id/newsmenu"
     >
     <fragment
-        android:id="@+id/mainmenu"
+        android:id="@+id/newsmenu"
         android:name="cdi.kirby.fragments.screens.News_screen"
-        tools:layout="@layout/activity_main"
-        >
+        tools:layout="@layout/news_screen">
         <action
             android:id="@+id/transition_news_games"
             app:destination="@+id/gamesmenu"
             app:enterAnim="@anim/enter_from_right"
             app:exitAnim="@anim/exit_to_left"
-            ></action>
+            >
+
+        </action>
+
+        <action
+            android:id="@+id/transition_news_community"
+            app:destination="@+id/communitymenu"
+            app:enterAnim="@anim/enter_from_right"
+            app:exitAnim="@anim/exit_to_left"
+            >
+
+        </action>
+
+        <action
+            android:id="@+id/transition_news_configuration"
+            app:destination="@+id/configurationmenu"
+            app:enterAnim="@anim/enter_from_right"
+            app:exitAnim="@anim/exit_to_left"
+            >
+
+        </action>
     </fragment>
 
     <fragment
         android:id="@+id/gamesmenu"
-        ></fragment>
+        android:name="cdi.kirby.fragments.screens.Games_screen"
+        tools:layout="@layout/games_screen">
+
+        <action
+            android:id="@+id/transition_games_news"
+            app:destination="@+id/newsmenu"
+            app:enterAnim="@anim/enter_from_left"
+            app:exitAnim="@anim/exit_to_right"
+            >
+
+        </action>
+
+        <action
+            android:id="@+id/transition_games_community"
+            app:destination="@+id/communitymenu"
+            app:enterAnim="@anim/enter_from_right"
+            app:exitAnim="@anim/exit_to_left"
+            >
+
+        </action>
+
+        <action
+            android:id="@+id/transition_games_configuration"
+            app:destination="@+id/configurationmenu"
+            app:enterAnim="@anim/enter_from_right"
+            app:exitAnim="@anim/exit_to_left"
+            >
+
+        </action>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/communitymenu"
+        android:name="cdi.kirby.fragments.screens.Community_screen"
+        tools:layout="@layout/community_screen">
+
+        <action
+            android:id="@+id/transition_community_news"
+            app:destination="@+id/newsmenu"
+            app:enterAnim="@anim/enter_from_left"
+            app:exitAnim="@anim/exit_to_right"
+            >
+
+        </action>
+
+        <action
+            android:id="@+id/transition_community_games"
+            app:destination="@+id/gamesmenu"
+            app:enterAnim="@anim/enter_from_left"
+            app:exitAnim="@anim/exit_to_right"
+            >
+
+        </action>
+
+        <action
+            android:id="@+id/transition_community_cofiguration"
+            app:destination="@+id/configurationmenu"
+            app:enterAnim="@anim/enter_from_right"
+            app:exitAnim="@anim/exit_to_left"
+            >
+
+        </action>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/configurationmenu"
+        android:name="cdi.kirby.fragments.screens.Configuration_screen"
+        tools:layout="@layout/configuration_screen">
+
+        <action
+            android:id="@+id/transition_configuration_news"
+            app:destination="@+id/newsmenu"
+            app:enterAnim="@anim/enter_from_left"
+            app:exitAnim="@anim/exit_to_right"
+            >
+
+        </action>
+
+        <action
+            android:id="@+id/transition_configuration_games"
+            app:destination="@+id/gamesmenu"
+            app:enterAnim="@anim/enter_from_left"
+            app:exitAnim="@anim/exit_to_right"
+            >
+
+        </action>
+
+        <action
+            android:id="@+id/transition_configuration_community"
+            app:destination="@+id/communitymenu"
+            app:enterAnim="@anim/enter_from_left"
+            app:exitAnim="@anim/exit_to_right"
+            >
+
+        </action>
+
+    </fragment>
 </navigation>
 
