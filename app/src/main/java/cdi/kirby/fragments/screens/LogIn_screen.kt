@@ -1,14 +1,11 @@
 package cdi.kirby.fragments.screens
 
-import android.annotation.SuppressLint
 import android.app.Activity
 import android.content.Intent
-import android.graphics.Color
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import cdi.kirby.KirbyActivity
 import cdi.kirby.MyApp
@@ -42,7 +39,7 @@ class LogIn_screen : Fragment()
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        //fragmentView.setBackgroundColor(ContextCompat.getColor(MyApp.get().context, ))
+        fragmentView
         googleAuthButton.setOnClickListener { googleAuth() }
     }
 
