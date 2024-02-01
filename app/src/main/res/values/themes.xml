@@ -14,14 +14,21 @@
 
         <!-- Customize your theme here. -->
         <item name="bottomNavigationStyle">@style/Kirby.Bottombar</item>
+        <item name="fontFamily">?attr/fontFamily</item>
 
     </style>
     <style name="Kirby.Bottombar" parent="Widget.MaterialComponents.BottomNavigationView">
         <!-- BottomBar Colors. -->
         <item name="itemIconTint">@color/selectables_button_colors</item>
         <item name="itemTextColor">@color/selectables_button_colors</item>
-        <!-- <item name="android:fontFamily">?attr/fontFamily</item> -->
+    </style>
 
+    <style name="Kirby.TextView" parent="Widget.MaterialComponents.TextView">
+        <item name="android:fontFamily">?attr/fontFamily</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
 
+    <style name="circularimage">
+        <item name="cornerSize">50%</item>
     </style>
 </resources>

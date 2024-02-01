@@ -1,7 +1,7 @@
 package cdi.kirby
 import android.app.Activity
 import android.app.Application
-import cdi.kirby.clases.MyFirebase
+import cdi.kirby.clases.firebase.MyFirebase
 
 class MyApp : Application() {
     companion object

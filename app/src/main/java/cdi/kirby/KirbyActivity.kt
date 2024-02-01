@@ -7,5 +7,7 @@ class KirbyActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_kirby)
+
+        MyApp.get().context = this
     }
 }

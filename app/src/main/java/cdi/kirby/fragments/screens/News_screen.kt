@@ -5,9 +5,10 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import androidx.fragment.app.Fragment
 import cdi.kirby.R
-import cdi.kirby.clases.MyFirebase
+import cdi.kirby.clases.firebase.MyFirebase
 import com.google.android.material.imageview.ShapeableImageView
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -18,6 +19,15 @@ import java.net.URL
 class News_screen : Fragment(){
 
     lateinit var fragmentView : View
+    val imageNews1 by lazy { fragmentView.findViewById<ShapeableImageView>(R.id.image_news_1) }
+    val imageNews2 by lazy { fragmentView.findViewById<ShapeableImageView>(R.id.image_news_2) }
+    val imageNews3 by lazy { fragmentView.findViewById<ShapeableImageView>(R.id.image_news_3) }
+    val imageNews4 by lazy { fragmentView.findViewById<ShapeableImageView>(R.id.image_news_4) }
+
+    val textNews1 by lazy { fragmentView.findViewById<TextView>(R.id.text_news_1) }
+    val textNews2 by lazy { fragmentView.findViewById<TextView>(R.id.text_news_2) }
+    val textNews3 by lazy { fragmentView.findViewById<TextView>(R.id.text_news_3) }
+    val textNews4 by lazy { fragmentView.findViewById<TextView>(R.id.text_news_4) }
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -27,20 +37,46 @@ class News_screen : Fragment(){
         fragmentView = inflater.inflate(R.layout.news_screen, container, false)
         return fragmentView
     }
-    /*
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        MyFirebase.storage.loadImage(/*imagepath*/).downloadUrl
+        MyFirebase.storage.loadImage("/kirbyArt.jpg").downloadUrl
             .addOnSuccessListener { uri ->
-                loadImage(/*variable image screen news*/,uri)
+                loadImage(imageNews1,uri)
             }
             /*.addOnFailureListener(MyFirebase.crashlytics.logSimpleError("New Image Error"){
                 key("Image", result)
             })
             */
+
+        MyFirebase.storage.loadImage("kirbyBattle.jpg").downloadUrl
+            .addOnSuccessListener { uri ->
+                loadImage(imageNews2,uri)
+            }
+        /*.addOnFailureListener(MyFirebase.crashlytics.logSimpleError("New Image Error"){
+            key("Image", result)
+        })
+        */
+
+        MyFirebase.storage.loadImage("kirbyGame.jpg").downloadUrl
+            .addOnSuccessListener { uri ->
+                loadImage(imageNews3,uri)
+            }
+        /*.addOnFailureListener(MyFirebase.crashlytics.logSimpleError("New Image Error"){
+            key("Image", result)
+        })
+        */
+
+        MyFirebase.storage.loadImage("kirbyPaint.jpg").downloadUrl
+            .addOnSuccessListener { uri ->
+                loadImage(imageNews4,uri)
+            }
+        /*.addOnFailureListener(MyFirebase.crashlytics.logSimpleError("New Image Error"){
+            key("Image", result)
+        })
+        */
     }
-     */
 
     //loading image for our news
     private fun loadImage(image: ShapeableImageView, uri: Uri)
