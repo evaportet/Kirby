@@ -14,7 +14,7 @@
 
         <!-- Customize your theme here. -->
         <item name="bottomNavigationStyle">@style/Kirby.Bottombar</item>
-        <item name="fontFamily">?attr/fontFamily</item>
+        <item name="fontFamily">@font/coinycyrillic</item>
 
     </style>
     <style name="Kirby.Bottombar" parent="Widget.MaterialComponents.BottomNavigationView">
