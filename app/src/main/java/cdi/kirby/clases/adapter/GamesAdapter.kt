@@ -48,6 +48,8 @@ class GamesAdapter(repository: KirbyRepository) : Adapter<GameViewHolder>() {
 
         CoroutineScope(Dispatchers.IO).launch {
 
+            provider.GetGames(0 ,20)
+
 
             CoroutineScope(Dispatchers.Main).launch {
 
