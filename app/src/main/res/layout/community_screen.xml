@@ -3,14 +3,58 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/pink"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/fui_transparent"
+    android:padding="40dp"
     android:orientation="vertical">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="COMMUNITY">
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="32dp">
 
-    </TextView>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/community_post_username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/pink"
+                android:textColor="@color/black"
+                android:padding="10dp"
+                tools:text="LiaMS">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/community_post_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/community_post_username"
+                android:padding="10dp"
+                android:textColor="@color/black"
+                tools:text="I made this fanart!">
+
+            </TextView>
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/community_post_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/community_post_title"
+                android:padding="10dp"
+                app:shapeAppearanceOverlay="@style/circularimage"
+                tools:src="@drawable/ic_launcher_background">
+
+            </com.google.android.material.imageview.ShapeableImageView>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
 
 </LinearLayout>

@@ -2,55 +2,163 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@color/pink"
+    android:background="@color/fui_transparent"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:padding="5dp"
+    android:orientation="horizontal">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="horizontal"
-        android:layout_marginHorizontal="30dp"
-
+        android:orientation="vertical"
+        android:layout_marginHorizontal="5dp"
         android:layout_weight="0.5">
 
-            <androidx.cardview.widget.CardView
-            android:layout_width="170dp"
-            android:layout_height="match_parent"
-            app:cardBackgroundColor="@color/pinkDark">
-
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-             android:layout_marginTop="50dp"
+        <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
-            android:layout_height="160dp"
-            app:cardBackgroundColor="@color/pinkDark">
+            android:layout_height="0dp"
+            app:cardBackgroundColor="@color/pinkDark"
+            android:layout_weight="0.4"
+            app:cardCornerRadius="32dp">
 
-            </androidx.cardview.widget.CardView>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/image_news_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                </com.google.android.material.imageview.ShapeableImageView>
+
+                <TextView
+                    android:id="@+id/text_news_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="@id/image_news_1"
+                    android:background="@color/pink"
+                    android:textAlignment="center"
+                    android:paddingVertical="8dp"
+                    tools:text="Update on Fighters 2">
+
+                </TextView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.6"
+            app:cardBackgroundColor="@color/pinkDark"
+            app:cardCornerRadius="32dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/image_news_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                </com.google.android.material.imageview.ShapeableImageView>
+
+                <TextView
+                    android:id="@+id/text_news_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="@id/image_news_2"
+                    android:background="@color/pink"
+                    android:textAlignment="center"
+                    android:paddingVertical="8dp"
+                    tools:text="Update on Fighters 2">
+
+                </TextView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
 
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="horizontal"
-        android:layout_marginHorizontal="30dp"
-        android:layout_marginBottom="100dp"
+        android:orientation="vertical"
+        android:layout_marginHorizontal="5dp"
         android:layout_weight="0.5">
 
         <androidx.cardview.widget.CardView
-            android:layout_marginTop="50dp"
-            android:layout_width="170dp"
-            android:layout_height="160dp"
-            app:cardBackgroundColor="@color/pinkDark">
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:cardBackgroundColor="@color/pinkDark"
+            android:layout_weight="0.6"
+            android:layout_marginBottom="10dp"
+            app:cardCornerRadius="32dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/image_news_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                </com.google.android.material.imageview.ShapeableImageView>
+
+                <TextView
+                    android:id="@+id/text_news_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="@id/image_news_3"
+                    android:background="@color/pink"
+                    android:textAlignment="center"
+                    android:paddingVertical="8dp"
+                    tools:text="Update on Fighters 2">
+
+                </TextView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
         </androidx.cardview.widget.CardView>
+
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:cardBackgroundColor="@color/pinkDark">
+            android:layout_height="0dp"
+            app:cardBackgroundColor="@color/pinkDark"
+            android:layout_weight="0.4"
+            app:cardCornerRadius="32dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/image_news_4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                </com.google.android.material.imageview.ShapeableImageView>
+
+                <TextView
+                    android:id="@+id/text_news_4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="@id/image_news_4"
+                    android:background="@color/pink"
+                    android:textAlignment="center"
+                    android:paddingVertical="8dp"
+                    tools:text="Update on Fighters 2">
+
+                </TextView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
         </androidx.cardview.widget.CardView>
     </LinearLayout>

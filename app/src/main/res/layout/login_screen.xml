@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center"
-    android:background="@color/pink">
+    android:background="@color/fui_transparent">
 
         <com.google.android.material.card.MaterialCardView
             android:layout_width="wrap_content"
