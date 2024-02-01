@@ -12,6 +12,6 @@ object SharedPreferencesManager {
 
     private val editor: SharedPreferences.Editor by lazy { shared.edit() }
 
-    var backgroundColor : String = "#0xF2788D"
+    var backgroundColor : Int = MyApp.get().context.resources.getColor(R.color.pink)
 
 }

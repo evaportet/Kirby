@@ -1,5 +1,6 @@
 package cdi.kirby.fragments.screens
 
+import android.content.Context
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -20,8 +21,6 @@ class Configuration_screen : Fragment() {
     val logOutButton by lazy { fragmentView.findViewById<Button>(R.id.log_out_button) }
     val spinnerBackgroundColor by lazy { fragmentView.findViewById<Spinner>(R.id.spinner_background_color) }
 
-    lateinit var backgroundColorSelected : String
-
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -34,13 +33,32 @@ class Configuration_screen : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        var context = MyApp.get().context
+
         val backgroundColors = resources.getStringArray(R.array.background_colors)
 
-        backgroundColorSelected = SharedPreferencesManager.backgroundColor
-
-        val spinnerBackgroundColorsAdapter = ArrayAdapter(MyApp.get().context, android.R.layout.simple_spinner_item, backgroundColors)
+        val spinnerBackgroundColorsAdapter = ArrayAdapter(context, android.R.layout.simple_spinner_item, backgroundColors)
 
         spinnerBackgroundColor.adapter = spinnerBackgroundColorsAdapter
+
+        var backgroundColorSelected : Int = SharedPreferencesManager.backgroundColor
+
+        lateinit var value : String
+
+        when(backgroundColorSelected){
+            context.resources.getColor(R.color.purple_200) -> {
+                value = backgroundColors[0]
+            }
+            context.resources.getColor(R.color.pink) -> {
+                value = backgroundColors[1]
+            }
+            context.resources.getColor(R.color.yellow) -> {
+                value = backgroundColors[2]
+            }
+        }
+
+        var position = spinnerBackgroundColorsAdapter.getPosition(value)
+        spinnerBackgroundColor.setSelection(position)
 
         spinnerBackgroundColor.onItemSelectedListener = object :
             AdapterView.OnItemSelectedListener{
@@ -50,17 +68,21 @@ class Configuration_screen : Fragment() {
                 position: Int,
                 id: Long
             ) {
+
                 when(spinnerBackgroundColor.selectedItem.toString()){
                     backgroundColors[0] -> {
-                        SharedPreferencesManager.backgroundColor = "#FFBB86FC"
+                        backgroundColorSelected = context.resources.getColor(R.color.purple_200)
                     }
                     backgroundColors[1] -> {
-                        SharedPreferencesManager.backgroundColor = "#F2788D"
+                        backgroundColorSelected = context.resources.getColor(R.color.pink)
                     }
                     backgroundColors[2] -> {
-                        SharedPreferencesManager.backgroundColor = "#FEE745"
+                        backgroundColorSelected = context.resources.getColor(R.color.yellow)
                     }
                 }
+                SharedPreferencesManager.backgroundColor = backgroundColorSelected
+                MainScreen.get().ChangeBackgroundColor(backgroundColorSelected)
+                SecondaryScreen.get().ChangeBackgroundColor(backgroundColorSelected)
             }
 
             override fun onNothingSelected(parent: AdapterView<*>?) {
@@ -69,7 +91,7 @@ class Configuration_screen : Fragment() {
             }
 
         logOutButton.setOnClickListener {
-            MyApp.get().context.finish()
+            context.finish()
         }
     }
 }
