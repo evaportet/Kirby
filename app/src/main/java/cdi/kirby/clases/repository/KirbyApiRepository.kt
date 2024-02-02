@@ -38,16 +38,27 @@ class KirbyApiRepository : KirbyRepository {
         .addHeader("Cookie", "__cf_bm=AKKJyxdoawa8In63GZmItasX_J.UH8pmrOrs1lowwEg-1706803313-1-AanizTHv8YL08saTC++S3BY2lSpxa2IoaVeZ6+8xLrd1TDlSI8kakR4EXBOX21kmMLI6chk7Y8dIqy3PX/Elipg=")
         .build()
 
+
+
     override suspend fun GetGames(offset: Int, limit: Int): MutableList<GameData> {
 
-        val response = client.newCall(request).execute()
+        /*client.newCall(request).enqueue(object : Callback {
+            override fun onResponse(call: Call, response: Response) {
+                if (response.isSuccessful) {
+                    val responseBody = response.body?.string()
+                    // Procesar la respuesta aquí (puede ser necesario analizar el JSON)
+                    // responseBody contiene la respuesta en formato JSON o XML
+                } else {
+                    // Manejar el caso en el que la solicitud no fue exitosa
+                    println("Error en la solicitud. Código de estado: ${response.code()}")
+                }
+            }
 
-        if (!response.isSuccessful)
-        {
-            return mutableListOf()
-        }
-
-        val response2 = 5;
+            override fun onFailure(call: Call, e: IOException) {
+                // Manejar fallos de red o excepciones aquí
+                e.printStackTrace()
+            }
+        })*/
 
         return mutableListOf()
     }

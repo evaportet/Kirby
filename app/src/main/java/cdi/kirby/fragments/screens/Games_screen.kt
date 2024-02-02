@@ -11,6 +11,7 @@ import cdi.kirby.MyApp
 import cdi.kirby.R
 import cdi.kirby.clases.adapter.GamesAdapter
 import cdi.kirby.clases.repository.KirbyApiRepository
+import cdi.kirby.clases.repository.KirbyMockRepository
 
 class Games_screen : Fragment() {
 
@@ -31,7 +32,8 @@ class Games_screen : Fragment() {
 
         table.layoutManager = LinearLayoutManager(MyApp.get().context)
 
-        val repository = KirbyApiRepository()
+        //val repository = KirbyApiRepository()
+        val repository = KirbyMockRepository()
 
         table.adapter = GamesAdapter(repository)
     }
