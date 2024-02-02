@@ -19,6 +19,7 @@ import com.firebase.ui.auth.data.model.FirebaseAuthUIAuthenticationResult
 import com.google.android.gms.common.SignInButton
 import java.util.Date
 
+
 class LogIn_screen : Fragment()
 {
     lateinit var fragmentView: View
