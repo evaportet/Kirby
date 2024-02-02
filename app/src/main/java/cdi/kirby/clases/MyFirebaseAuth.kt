@@ -1,13 +1,33 @@
 package cdi.kirby.clases
 
 import android.app.Application
-import com.enti.dostres.cdi.abrahamlopezpamias.modulodosfirebasecdi.R
+import cdi.kirby.R
 import com.google.firebase.auth.FirebaseAuth
 
-class MyFirebaseAuth(val appContext: Application) {
+class MyFirebaseAuth() {
 
-    private val firebaseAuth = FirebaseAuth.getInstance()
+    private val firebaseAuthentication = FirebaseAuth.getInstance()
+    private var currentUser: DataBaseUser? = null
 
-    fun getUsername() = firebaseAuth.currentUser?.displayName ?: appContext.getString(R.string.unknown_user)
+    fun IsLoginActive() = GetUser() != null;
 
+    fun SetCurrentUser(newUser: DataBaseUser){
+        currentUser = newUser
+    }
+
+    fun GetUser() = currentUser
+
+    fun GetAuthenticationDatabaseUser(): DataBaseUser? {
+
+        firebaseAuthentication.currentUser?.let { user ->
+            val dataBaseUser = DataBaseUser(
+                id = user.uid,
+                email = user.email,
+                username = user.displayName,
+                photoPath = user.photoUrl.toString()
+            )
+            return dataBaseUser
+        }
+        return null
+    }
 }

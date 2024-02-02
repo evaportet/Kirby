@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/pink">
+
+    <!-- TOP BAR -->
+    <ImageView
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="126dp"
+        android:src="@drawable/toolbar">
+    </ImageView>
+
+    <!-- CONTENT -->
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:layout_above="@+id/bottombar"
+        android:name="cdi.kirby.fragments.components.AppNavHost"
+        >
+    </androidx.fragment.app.FragmentContainerView>
+
+    <!-- BOTTOM BAR -->
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/bottombar"
+        android:name="cdi.kirby.fragments.components.AppBottomBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        tools:layout="@layout/component_bottombar"
+        >
+    </androidx.fragment.app.FragmentContainerView>
+
+</RelativeLayout>
