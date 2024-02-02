@@ -43,10 +43,6 @@ class Game_description_screen : Fragment() {
 
         val gameData = SharedPreferencesManager.gameData
 
-        val timeInSeconds = (System.currentTimeMillis() - gameData.releaseDate) / 1000
-
-        val year = timeInSeconds / 31556952
-
         MyFirebase.storage.loadImage("/games/${gameData.imagePath}").downloadUrl
             .addOnSuccessListener { uri ->
                 loadImage(image, uri)
@@ -57,7 +53,7 @@ class Game_description_screen : Fragment() {
                 }
             }
 
-        yearRelease.text = "Year : $year"
+        yearRelease.text = "Year : ${gameData.releaseDate}"
 
         platformRelease.text = "Platform : ${gameData.platform}"
 
