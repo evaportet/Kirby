@@ -70,6 +70,15 @@
 
         </action>
 
+        <action
+            android:id="@+id/transition_games_description"
+            app:destination="@+id/gamesdescription"
+            app:enterAnim="@anim/enter_from_right"
+            app:exitAnim="@anim/exit_to_left"
+            >
+
+        </action>
+
     </fragment>
 
     <fragment
@@ -132,6 +141,22 @@
         <action
             android:id="@+id/transition_configuration_community"
             app:destination="@+id/communitymenu"
+            app:enterAnim="@anim/enter_from_left"
+            app:exitAnim="@anim/exit_to_right"
+            >
+
+        </action>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/gamesdescription"
+        android:name="cdi.kirby.fragments.screens.Game_description_screen"
+        tools:layout="@layout/game_description_screen">
+
+        <action
+            android:id="@+id/transition_description_game"
+            app:destination="@+id/gamesmenu"
             app:enterAnim="@anim/enter_from_left"
             app:exitAnim="@anim/exit_to_right"
             >

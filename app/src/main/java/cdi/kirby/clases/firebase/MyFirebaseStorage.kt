@@ -32,6 +32,6 @@ class MyFirebaseStorage {
 
     fun loadImage (imagePath: String): StorageReference
     {
-        return imagesReference.child(imagePath)
+        return storageRootReference.child(imagePath)
     }
 }

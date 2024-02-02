@@ -51,6 +51,8 @@ class KirbyApiRepository : KirbyRepository {
                 } else {
                     // Manejar el caso en el que la solicitud no fue exitosa
                     println("Error en la solicitud. Código de estado: ${response.code()}")
+                    MyFirebase.crashlytics.logSimpleError("Call API Error"){
+                        key("Code", "responde.code")
                 }
             }
 

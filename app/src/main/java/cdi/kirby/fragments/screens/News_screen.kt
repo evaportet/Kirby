@@ -41,41 +41,57 @@ class News_screen : Fragment(){
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        MyFirebase.storage.loadImage("/kirbyArt.jpg").downloadUrl
+        MyFirebase.storage.loadImage("/news/kirbyArt.jpg").downloadUrl
             .addOnSuccessListener { uri ->
                 loadImage(imageNews1,uri)
             }
-            /*.addOnFailureListener(MyFirebase.crashlytics.logSimpleError("New Image Error"){
-                key("Image", result)
-            })
-            */
+            .addOnFailureListener {
+                MyFirebase.crashlytics.logSimpleError("Load Image Error"){
+                    key("Image", "/news/kirbyFanArt.jpg")
+                }
+            }
 
-        MyFirebase.storage.loadImage("kirbyBattle.jpg").downloadUrl
+        textNews1.text = "Update on Fighters 2"
+
+
+        MyFirebase.storage.loadImage("/news/kirbyBattle.jpg").downloadUrl
             .addOnSuccessListener { uri ->
                 loadImage(imageNews2,uri)
             }
-        /*.addOnFailureListener(MyFirebase.crashlytics.logSimpleError("New Image Error"){
-            key("Image", result)
-        })
-        */
+            .addOnFailureListener {
+                MyFirebase.crashlytics.logSimpleError("Load Image Error"){
+                    key("Image", "/news/kirbyBattle.jpg")
+                }
+            }
 
-        MyFirebase.storage.loadImage("kirbyGame.jpg").downloadUrl
+        textNews2.text = "NamoCHI speacial art"
+
+
+        MyFirebase.storage.loadImage("/news/kirbyGame.jpg").downloadUrl
             .addOnSuccessListener { uri ->
                 loadImage(imageNews3,uri)
             }
-        /*.addOnFailureListener(MyFirebase.crashlytics.logSimpleError("New Image Error"){
-            key("Image", result)
-        })
-        */
+            .addOnFailureListener {
+                MyFirebase.crashlytics.logSimpleError("Load Image Error"){
+                    key("Image", "/news/kirbyGame.jpg")
+                }
+            }
 
-        MyFirebase.storage.loadImage("kirbyPaint.jpg").downloadUrl
+        textNews3.text = "Kirby Tribu is live!"
+
+
+        MyFirebase.storage.loadImage("/news/kirbyPaint.jpg").downloadUrl
             .addOnSuccessListener { uri ->
                 loadImage(imageNews4,uri)
             }
-        /*.addOnFailureListener(MyFirebase.crashlytics.logSimpleError("New Image Error"){
-            key("Image", result)
-        })
-        */
+            .addOnFailureListener {
+                MyFirebase.crashlytics.logSimpleError("Load Image Error"){
+                    key("Image", "/news/kirbyPaint.jpg")
+                }
+            }
+
+        textNews4.text = "Mario Bros: Kirby"
+
     }
 
     //loading image for our news
