@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="32dp"
+        android:layout_marginVertical="12dp"
+        app:cardBackgroundColor="@color/pinkDark"
+        app:cardCornerRadius="24dp">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/game_description_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            tools:src="@drawable/ic_launcher_background">
+
+        </com.google.android.material.imageview.ShapeableImageView>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="32dp"
+        android:layout_marginVertical="12dp"
+        app:cardBackgroundColor="@color/pinkDark"
+        android:layout_gravity="center"
+        app:cardCornerRadius="24dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/year_release"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="24dp"
+                android:layout_marginHorizontal="12dp"
+                android:textColor="@color/black"
+                tools:text="Year : 2017">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/platform_release"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="24dp"
+                android:layout_marginHorizontal="12dp"
+                android:textColor="@color/black"
+                tools:text="Platform: Nintendo 3DS">
+
+            </TextView>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="32dp"
+        android:layout_marginVertical="12dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="24dp">
+
+        <TextView
+            android:id="@+id/game_description_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:padding="12dp">
+
+        </TextView>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <ImageButton
+        android:id="@+id/back_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@color/fui_transparent"
+        android:src="@drawable/previous">
+
+    </ImageButton>
+
+</LinearLayout>

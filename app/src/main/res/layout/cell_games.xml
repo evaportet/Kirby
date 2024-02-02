@@ -35,6 +35,8 @@
                 android:layout_height="match_parent"
                 android:layout_marginVertical="8dp"
                 android:layout_marginEnd="24dp"
+                android:gravity="center"
+                android:textSize="24dp"
                 tool:text="asdjhfsdjhvfb">
 
             </TextView>
