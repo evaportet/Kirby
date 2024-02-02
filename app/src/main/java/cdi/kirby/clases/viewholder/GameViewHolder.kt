@@ -26,6 +26,11 @@ class GameViewHolder(view : View, var gameData: GameData? = null) : ViewHolder(v
             .addOnSuccessListener { uri ->
                 loadImage(image, uri)
             }
+            .addOnFailureListener {
+                cdi.kirby.clases.firebase.MyFirebase.crashlytics.logSimpleError("Load Image Error"){
+                    key("Image", "/games/${gameData.imagePath}")
+                }
+            }
 
         title.text = gameData.title
         this.gameData = gameData

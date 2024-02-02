@@ -51,6 +51,11 @@ class Game_description_screen : Fragment() {
             .addOnSuccessListener { uri ->
                 loadImage(image, uri)
             }
+            .addOnFailureListener {
+                cdi.kirby.clases.firebase.MyFirebase.crashlytics.logSimpleError("Load Image Error"){
+                    key("Image", "/games/${gameData.imagePath}")
+                }
+            }
 
         yearRelease.text = "Year : $year"
 

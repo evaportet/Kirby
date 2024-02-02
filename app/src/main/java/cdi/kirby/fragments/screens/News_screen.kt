@@ -41,7 +41,7 @@ class News_screen : Fragment(){
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        MyFirebase.storage.loadImage("/kirbyArt.jpg").downloadUrl
+        MyFirebase.storage.loadImage("/news/kirbyArt.jpg").downloadUrl
             .addOnSuccessListener { uri ->
                 loadImage(imageNews1,uri)
             }
@@ -54,7 +54,7 @@ class News_screen : Fragment(){
         textNews1.text = "Update on Fighters 2"
 
 
-        MyFirebase.storage.loadImage("/kirbyBattle.jpg").downloadUrl
+        MyFirebase.storage.loadImage("/news/kirbyBattle.jpg").downloadUrl
             .addOnSuccessListener { uri ->
                 loadImage(imageNews2,uri)
             }
@@ -67,7 +67,7 @@ class News_screen : Fragment(){
         textNews2.text = "NamoCHI speacial art"
 
 
-        MyFirebase.storage.loadImage("/kirbyGame.jpg").downloadUrl
+        MyFirebase.storage.loadImage("/news/kirbyGame.jpg").downloadUrl
             .addOnSuccessListener { uri ->
                 loadImage(imageNews3,uri)
             }
@@ -80,7 +80,7 @@ class News_screen : Fragment(){
         textNews3.text = "Kirby Tribu is live!"
 
 
-        MyFirebase.storage.loadImage("/kirbyPaint.jpg").downloadUrl
+        MyFirebase.storage.loadImage("/news/kirbyPaint.jpg").downloadUrl
             .addOnSuccessListener { uri ->
                 loadImage(imageNews4,uri)
             }
